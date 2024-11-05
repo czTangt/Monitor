@@ -42,6 +42,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        dataBinding = true // 启用数据绑定
     }
 }
 
