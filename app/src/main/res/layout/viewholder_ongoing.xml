@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/pic"
+        android:id="@+id/pic_ongoing"
         android:layout_width="36dp"
         android:layout_height="36dp"
         android:layout_marginTop="16dp"
@@ -30,7 +30,7 @@
         app:layout_constraintTop_toBottomOf="@+id/dataText" />
 
     <TextView
-        android:id="@+id/titleText"
+        android:id="@+id/titleText_ongoing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -39,11 +39,11 @@
         android:textColor="@color/dark_blue"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/pic"
+        app:layout_constraintBottom_toBottomOf="@+id/pic_ongoing"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/pic"
-        app:layout_constraintTop_toTopOf="@+id/pic" />
+        app:layout_constraintStart_toEndOf="@+id/pic_ongoing"
+        app:layout_constraintTop_toTopOf="@+id/pic_ongoing" />
 
     <TextView
         android:id="@+id/progressText"
@@ -53,8 +53,8 @@
         android:text="Progress"
         android:textColor="@color/dark_blue"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/pic"
-        app:layout_constraintTop_toBottomOf="@+id/pic" />
+        app:layout_constraintStart_toStartOf="@+id/pic_ongoing"
+        app:layout_constraintTop_toBottomOf="@+id/pic_ongoing" />
 
     <ProgressBar
         android:id="@+id/progressBar"
