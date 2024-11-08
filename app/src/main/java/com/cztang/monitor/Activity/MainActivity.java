@@ -1,6 +1,8 @@
 package com.cztang.monitor.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -25,6 +27,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         initRecyclerView();
+        bottomNavigationInit();
+    }
+
+    private void bottomNavigationInit() {
+        binding.profileBtnMain.setOnClickListener(v ->
+                startActivity(new Intent(MainActivity.this, ProfileActivity.class)));
     }
 
     private void initRecyclerView() {
