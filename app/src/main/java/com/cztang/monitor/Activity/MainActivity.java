@@ -26,7 +26,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         initRecyclerView();
+        ComponentsInit();
         bottomNavigationInit();
+    }
+
+    private void ComponentsInit() {
+        binding.ComponentTextMain.setText("Hello World!");
     }
 
     private void bottomNavigationInit() {
@@ -36,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initRecyclerView() {
         ArrayList<OngoingDomain> items = new ArrayList<>();
-        items.add(new OngoingDomain("1Food App", "Jun 12, 2023", 50, "ongoing1"));
+        items.add(new OngoingDomain("Device Information", "Nov 8, 2024", 50, "ongoing1"));
         items.add(new OngoingDomain("2Food App", "Jun 12, 2023", 60, "ongoing4"));
         items.add(new OngoingDomain("3Food App", "Jun 12, 2023", 25, "ongoing3"));
         items.add(new OngoingDomain("4Food App", "Jun 12, 2023", 80, "ongoing2"));

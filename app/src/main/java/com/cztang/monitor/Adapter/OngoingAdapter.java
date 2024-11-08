@@ -1,6 +1,7 @@
 package com.cztang.monitor.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.PorterDuff;
 import android.view.LayoutInflater;
@@ -16,6 +17,7 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.cztang.monitor.Activity.ProfileActivity;
 import com.cztang.monitor.Domain.OngoingDomain;
 import com.cztang.monitor.R;
 
@@ -31,14 +33,14 @@ public class OngoingAdapter extends RecyclerView.Adapter<OngoingAdapter.ViewHold
 
     @NonNull
     @Override
-    public OngoingAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         context = parent.getContext();
         View inflator = LayoutInflater.from(context).inflate(R.layout.viewholder_ongoing, parent, false);
         return new ViewHolder(inflator);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull OngoingAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.title.setText(items.get(position).getTitle());
         holder.date.setText(items.get(position).getData());
         holder.progressBarPercent.setText(items.get(position).getProgressPercent() + "%");
@@ -70,6 +72,18 @@ public class OngoingAdapter extends RecyclerView.Adapter<OngoingAdapter.ViewHold
             holder.pic.setColorFilter(ContextCompat.getColor(context, R.color.dark_blue), PorterDuff.Mode.SRC_IN);
             holder.progressBar.setProgressTintList(ColorStateList.valueOf(context.getColor(R.color.dark_blue)));
         }
+
+        // 设置点击事件监听器，点击不同的 item 跳转到不同的 Activity
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent = null;
+            if (position == 0) {
+                intent = new Intent(context, ProfileActivity.class);
+            } else {
+//                intent = new Intent(context, TargetActivity.class);
+//                intent.putExtra("item_position", position);
+            }
+            context.startActivity(intent);
+        });
     }
 
     @Override
@@ -85,7 +99,7 @@ public class OngoingAdapter extends RecyclerView.Adapter<OngoingAdapter.ViewHold
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            layout = itemView.findViewById(R.id.layout);
+            layout = itemView.findViewById(R.id.Component_ongoing);
             progressText = itemView.findViewById(R.id.progressText_ongoing);
             title = itemView.findViewById(R.id.titleText_ongoing);
             date = itemView.findViewById(R.id.dataText_ongoing);
