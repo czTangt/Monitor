@@ -84,11 +84,11 @@ public class OngoingAdapter extends RecyclerView.Adapter<OngoingAdapter.ViewHold
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             layout = itemView.findViewById(R.id.layout);
-            progressText = itemView.findViewById(R.id.progressText);
+            progressText = itemView.findViewById(R.id.progressText_ongoing);
             title = itemView.findViewById(R.id.titleText_ongoing);
-            date = itemView.findViewById(R.id.dataText);
-            progressBar = itemView.findViewById(R.id.progressBar);
-            progressBarPercent = itemView.findViewById(R.id.percentText);
+            date = itemView.findViewById(R.id.dataText_ongoing);
+            progressBar = itemView.findViewById(R.id.progressBar_ongoing);
+            progressBarPercent = itemView.findViewById(R.id.percentText_ongoing);
             pic = itemView.findViewById(R.id.pic_ongoing);
         }
     }

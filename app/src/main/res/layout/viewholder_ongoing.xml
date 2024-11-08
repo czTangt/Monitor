@@ -9,7 +9,7 @@
     android:background="@drawable/light_background">
 
     <TextView
-        android:id="@+id/dataText"
+        android:id="@+id/dataText_ongoing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -26,8 +26,8 @@
         android:layout_height="36dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/ongoing2"
-        app:layout_constraintStart_toStartOf="@+id/dataText"
-        app:layout_constraintTop_toBottomOf="@+id/dataText" />
+        app:layout_constraintStart_toStartOf="@+id/dataText_ongoing"
+        app:layout_constraintTop_toBottomOf="@+id/dataText_ongoing" />
 
     <TextView
         android:id="@+id/titleText_ongoing"
@@ -46,7 +46,7 @@
         app:layout_constraintTop_toTopOf="@+id/pic_ongoing" />
 
     <TextView
-        android:id="@+id/progressText"
+        android:id="@+id/progressText_ongoing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -57,7 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/pic_ongoing" />
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/progressBar_ongoing"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -68,15 +68,15 @@
         android:progressTint="@color/dark_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressText" />
+        app:layout_constraintTop_toBottomOf="@+id/progressText_ongoing" />
 
     <TextView
-        android:id="@+id/percentText"
+        android:id="@+id/percentText_ongoing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="50%"
         android:textColor="@color/dark_blue"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/progressBar"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+        app:layout_constraintEnd_toEndOf="@+id/progressBar_ongoing"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar_ongoing" />
 </androidx.constraintlayout.widget.ConstraintLayout>
