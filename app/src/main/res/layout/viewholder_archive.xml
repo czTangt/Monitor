@@ -16,7 +16,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/folder" />
+        app:srcCompat="@drawable/icon_folder" />
 
     <TextView
         android:id="@+id/titleText_archive"

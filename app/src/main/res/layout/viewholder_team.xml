@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/team_background"
         android:padding="16dp"
-        android:src="@drawable/network"
+        android:src="@drawable/icon_network"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -50,7 +50,7 @@
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/arrow"
+        android:src="@drawable/icon_arrow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
