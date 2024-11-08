@@ -52,6 +52,7 @@ public class OngoingAdapter extends RecyclerView.Adapter<OngoingAdapter.ViewHold
 
         holder.progressBar.setProgress(items.get(position).getProgressPercent());
 
+        // 配置 position 0 的背景颜色为深色，其他为浅色
         if (position == 0) {
             holder.layout.setBackgroundResource(R.drawable.dark_background);
             holder.title.setTextColor(context.getColor(R.color.white));

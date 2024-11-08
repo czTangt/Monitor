@@ -2,7 +2,6 @@ package com.cztang.monitor.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -38,9 +37,9 @@ public class MainActivity extends AppCompatActivity {
     private void initRecyclerView() {
         ArrayList<OngoingDomain> items = new ArrayList<>();
         items.add(new OngoingDomain("1Food App", "Jun 12, 2023", 50, "ongoing1"));
-        items.add(new OngoingDomain("2Food App", "Jun 12, 2023", 50, "ongoing1"));
-        items.add(new OngoingDomain("3Food App", "Jun 12, 2023", 50, "ongoing1"));
-        items.add(new OngoingDomain("4Food App", "Jun 12, 2023", 50, "ongoing1"));
+        items.add(new OngoingDomain("2Food App", "Jun 12, 2023", 60, "ongoing4"));
+        items.add(new OngoingDomain("3Food App", "Jun 12, 2023", 25, "ongoing3"));
+        items.add(new OngoingDomain("4Food App", "Jun 12, 2023", 80, "ongoing2"));
         binding.viewOngoing.setLayoutManager(new GridLayoutManager(this, 2));
         adapterOngoing = new OngoingAdapter(items);
         binding.viewOngoing.setAdapter(adapterOngoing);
