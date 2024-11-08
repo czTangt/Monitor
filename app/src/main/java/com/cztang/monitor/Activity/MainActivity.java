@@ -1,10 +1,10 @@
 package com.cztang.monitor.Activity;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
 
 import com.cztang.monitor.Adapter.OngoingAdapter;
 import com.cztang.monitor.Domain.OngoingDomain;
@@ -13,10 +13,6 @@ import com.cztang.monitor.databinding.ActivityMainBinding;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
-//    static {
-//        System.loadLibrary("monitor");
-//    }
 
     private ActivityMainBinding binding;
     private RecyclerView.Adapter adapterOngoing;

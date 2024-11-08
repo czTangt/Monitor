@@ -2,25 +2,37 @@ package com.cztang.monitor.Activity;
 
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.cztang.monitor.R;
+import com.cztang.monitor.Adapter.ArchiveAdapter;
+import com.cztang.monitor.databinding.ActivityProfileBinding;
+
+import java.util.ArrayList;
 
 public class ProfileActivity extends AppCompatActivity {
+    ActivityProfileBinding binding;
+    private RecyclerView.Adapter adapterArchive;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_profile);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        binding = ActivityProfileBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        initRecyclerViewArchive();
+    }
+
+    private void initRecyclerViewArchive() {
+        ArrayList<String> items = new ArrayList<>();
+        items.add("UI/UX ScreenShot");
+        items.add("Kotlin Source Code");
+        items.add("Source Code");
+
+        binding.viewArchive.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        adapterArchive = new ArchiveAdapter(items);
+        binding.viewArchive.setAdapter(adapterArchive);
+
     }
 }

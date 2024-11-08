@@ -34,7 +34,7 @@ public class OngoingAdapter extends RecyclerView.Adapter<OngoingAdapter.ViewHold
     public OngoingAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         context = parent.getContext();
         View inflator = LayoutInflater.from(context).inflate(R.layout.viewholder_ongoing, parent, false);
-        return new ViewHolder((ViewGroup) inflator);
+        return new ViewHolder(inflator);
     }
 
     @Override
@@ -52,7 +52,7 @@ public class OngoingAdapter extends RecyclerView.Adapter<OngoingAdapter.ViewHold
 
         holder.progressBar.setProgress(items.get(position).getProgressPercent());
 
-        if(position == 0) {
+        if (position == 0) {
             holder.layout.setBackgroundResource(R.drawable.dark_background);
             holder.title.setTextColor(context.getColor(R.color.white));
             holder.date.setTextColor(context.getColor(R.color.white));
@@ -60,7 +60,7 @@ public class OngoingAdapter extends RecyclerView.Adapter<OngoingAdapter.ViewHold
             holder.progressBarPercent.setTextColor(context.getColor(R.color.white));
             holder.pic.setColorFilter(ContextCompat.getColor(context, R.color.white), PorterDuff.Mode.SRC_IN);
             holder.progressBar.setProgressTintList(ColorStateList.valueOf(context.getColor(R.color.white)));
-        }else{
+        } else {
             holder.layout.setBackgroundResource(R.drawable.light_background);
             holder.title.setTextColor(context.getColor(R.color.dark_blue));
             holder.date.setTextColor(context.getColor(R.color.dark_blue));
@@ -81,6 +81,7 @@ public class OngoingAdapter extends RecyclerView.Adapter<OngoingAdapter.ViewHold
         ProgressBar progressBar;
         ImageView pic;
         ConstraintLayout layout;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             layout = itemView.findViewById(R.id.layout);
