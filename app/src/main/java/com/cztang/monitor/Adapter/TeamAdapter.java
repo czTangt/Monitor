@@ -44,7 +44,6 @@ public class TeamAdapter extends RecyclerView.Adapter<TeamAdapter.ViewHolder> {
             super(itemView);
             title = itemView.findViewById(R.id.titleText_team);
             status = itemView.findViewById(R.id.statusText_team);
-
         }
     }
 }

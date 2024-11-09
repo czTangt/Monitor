@@ -36,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void initRecyclerView() {
         ArrayList<OngoingDomain> items = new ArrayList<>();
-        items.add(new OngoingDomain("Device", "Nov 8, 2024", 0, "icon_device"));
-        items.add(new OngoingDomain("Hook", "Nov 12, 2024", 0, "icon_hook"));
+        items.add(new OngoingDomain("Device Info", "Nov 8, 2024", 0, "icon_device"));
+        items.add(new OngoingDomain("Hook Status", "Nov 12, 2024", 0, "icon_hook"));
         items.add(new OngoingDomain("3Food App", "Jun 12, 2023", 25, "icon_hook"));
         items.add(new OngoingDomain("4Food App", "Jun 12, 2023", 80, "icon_hook"));
         binding.viewOngoing.setLayoutManager(new GridLayoutManager(this, 2));

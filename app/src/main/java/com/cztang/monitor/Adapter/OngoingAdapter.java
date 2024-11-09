@@ -17,6 +17,7 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.cztang.monitor.Activity.DeviceActivity;
 import com.cztang.monitor.Activity.ProfileActivity;
 import com.cztang.monitor.Domain.OngoingDomain;
 import com.cztang.monitor.R;
@@ -77,10 +78,9 @@ public class OngoingAdapter extends RecyclerView.Adapter<OngoingAdapter.ViewHold
         holder.itemView.setOnClickListener(v -> {
             Intent intent = null;
             if (position == 0) {
-                intent = new Intent(context, ProfileActivity.class);
+                intent = new Intent(context, DeviceActivity.class);
             } else {
-//                intent = new Intent(context, TargetActivity.class);
-//                intent.putExtra("item_position", position);
+                intent = new Intent(context, ProfileActivity.class);
             }
             context.startActivity(intent);
         });
